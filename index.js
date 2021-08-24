@@ -3,8 +3,8 @@ const core = require('@actions/core');
 try {
   const files = core.getInput('files');
   const vars_string = core.getInput('replacements');
-  var filenames = files.replace(' ', '').split(',')
-  var vars = vars_string.replace(' ', '').split(',')
+  var filenames = files.split(',')
+  var vars = vars_string.split(',')
   console.log('files l:'+ filenames.length)
   for(var fi = 0; fi < filenames.length; fi++)
   {
